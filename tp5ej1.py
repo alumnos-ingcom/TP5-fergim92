@@ -14,16 +14,14 @@ def par_impar(numero):
         else:
             return False
     
-    elif numero < 0:
+    else:
         while numero < 0:
             numero += 2
         if numero == 0:
             return True
         else:
             return False
-    else:
-        return 0
-
+   
 
 def prueba():
     numero = input('Ingrese un numero entero para saber si es par o impar: ')
@@ -35,11 +33,9 @@ def prueba():
     resultado = par_impar(numero)
     if resultado == True:
         print(f'El numero es par')
-    elif resultado == False:
-        print(f'El numero es impar')
     else:
-        print(f'El numero es cero')
+        print(f'El numero es impar')
+  
              
-
 if __name__ == "__main__":
     prueba()
