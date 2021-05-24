@@ -13,10 +13,10 @@ def tribonacci(numero):
 
 
 def prueba():
-    numero = input('Ingrese un numero entero positivo para calcular su serie tribonacci (minimo 3): ')
+    numero = input('Ingrese un numero entero positivo para calcular su serie tribonacci (mayor a 3): ')
     numero = no_numero_no_positivo(numero)
     
-    while numero < 3:
+    while numero < 4:
         numero = input('Mayor a 3!!!: ')
         numero = no_numero_no_positivo(numero)
         
