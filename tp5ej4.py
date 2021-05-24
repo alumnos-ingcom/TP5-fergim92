@@ -2,8 +2,7 @@
 # Gimenez Fernando - @fergim92
 # UNRN Andina - Introducción a la Ingenieria en Computación
 ################
-class IngresoIncorrecto(Exception):
-    pass
+from errores import no_numero_no_positivo
 
 def numeros_perfectos(numero):
     i = 2
@@ -14,7 +13,7 @@ def numeros_perfectos(numero):
             suma += i       # sumamos los divisores
         i += 1    
      
-    if suma == numero and numero != 1:
+    if (suma == numero) and (numero != 1):
         return True
     else:
         return False
@@ -22,12 +21,7 @@ def numeros_perfectos(numero):
 
 def prueba():
     numero = input('Ingrese un numero entero positivo para saber si es perfecto: ')
-    try:
-        numero = int(numero)
-    except ValueError as err:
-        raise IngresoIncorrecto(f'"{numero}" No era un número entero!!!') from err
-    if numero < 0:
-        raise IngresoIncorrecto(f'"{numero}" Entero positivo !!!')
+    numero = no_numero_no_positivo(numero)
     
     num = numeros_perfectos(numero)
     if num == True:
