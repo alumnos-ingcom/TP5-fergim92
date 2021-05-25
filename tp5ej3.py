@@ -2,7 +2,7 @@
 # Gimenez Fernando - @fergim92
 # UNRN Andina - Introducción a la Ingenieria en Computación
 ################
-from errores import no_numero_no_positivo
+from errores import convierte_a_int_positivo
 def tribonacci(numero):
     serie = [1,1,1]
     for i in range(numero -3):
@@ -14,11 +14,11 @@ def tribonacci(numero):
 
 def prueba():
     numero = input('Ingrese un numero entero positivo para calcular su serie tribonacci (mayor a 3): ')
-    numero = no_numero_no_positivo(numero)
+    numero = convierte_a_int_positivo(numero)
     
     while numero < 4:
         numero = input('Mayor a 3!!!: ')
-        numero = no_numero_no_positivo(numero)
+        numero = convierte_a_int_positivo(numero)
         
     print(tribonacci(numero))
     

@@ -2,7 +2,7 @@
 # Gimenez Fernando - @fergim92
 # UNRN Andina - Introducción a la Ingenieria en Computación
 ################
-from errores import no_numero_no_positivo
+from errores import convierte_a_int_positivo
 
 def numeros_perfectos(numero):
     i = 2
@@ -21,7 +21,7 @@ def numeros_perfectos(numero):
 
 def prueba():
     numero = input('Ingrese un numero entero positivo para saber si es perfecto: ')
-    numero = no_numero_no_positivo(numero)
+    numero = convierte_a_int_positivo(numero)
     
     num = numeros_perfectos(numero)
     if num == True:

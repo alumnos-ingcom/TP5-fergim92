@@ -2,7 +2,7 @@
 # Gimenez Fernando - @fergim92
 # UNRN Andina - Introducción a la Ingenieria en Computación
 ################
-from errores import no_numero_int
+from errores import convierte_a_int
 
 def par_impar(numero):
     while numero > 0:
@@ -19,7 +19,7 @@ def par_impar(numero):
 
 def prueba():
     numero = input('Ingrese un numero entero para saber si es par o impar: ')
-    numero = no_numero_int(numero)
+    numero = convierte_a_int(numero)
     
     resultado = par_impar(numero)
     if resultado == True:

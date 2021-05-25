@@ -2,7 +2,7 @@
 # Gimenez Fernando - @fergim92
 # UNRN Andina - Introducción a la Ingenieria en Computación
 ################
-from errores import no_numero_no_positivo
+from errores import convierte_a_int_positivo
 
 def fibonacci(numero):
     serie = [1,1]
@@ -15,11 +15,11 @@ def fibonacci(numero):
 
 def prueba():
     numero = input('Ingrese un numero entero positivo para calcular su serie fibonacci (mayor a 2): ')
-    numero = no_numero_no_positivo(numero)
+    numero = convierte_a_int_positivo(numero)
     
     while numero < 3:
         numero = input('Mayor a 2!!!: ')
-        numero = no_numero_no_positivo(numero)
+        numero = convierte_a_int_positivo(numero)
         
     print(fibonacci(numero))
     

@@ -2,7 +2,7 @@
 # Gimenez Fernando - @fergim92
 # UNRN Andina - Introducción a la Ingenieria en Computación
 ################
-from errores import no_numero_int
+from errores import convierte_a_int
 
 def cifrado(texto, mover):
     codificado = []
@@ -38,7 +38,7 @@ def decifrado(texto, mover):
 def prueba():
     texto = input('Digite un texto para codificarlo: ')
     mover = input('Cuantas posiciones desea rotar el abecedario para cifrar el mensaje: ')
-    mover = no_numero_int(mover)
+    mover = convierte_a_int(mover)
     
     texto_cifrado = cifrado(texto, mover)
     texto_decifrado = decifrado(texto_cifrado, mover)
