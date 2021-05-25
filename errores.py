@@ -6,7 +6,7 @@
 class IngresoIncorrecto(Exception):
     pass
 
-def no_numero_int(numero):
+def convierte_a_int(numero):
     try:
         numero = int(numero)
     except ValueError as err:
@@ -14,7 +14,7 @@ def no_numero_int(numero):
     return numero
 
 
-def no_numero_float(numero):
+def convierte_a_float(numero):
     try:
         numero = float(numero)
     except ValueError as err:
@@ -22,7 +22,7 @@ def no_numero_float(numero):
     return numero
 
     
-def no_numero_no_positivo(numero):    
+def convierte_a_int_positivo(numero):    
     try:
         numero = int(numero)
     except ValueError as err:
