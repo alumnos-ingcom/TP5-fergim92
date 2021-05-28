@@ -7,7 +7,11 @@ from errores import convierte_a_float
 def distancia_entre_puntos(n1, n2):
     centro = (n1 + n2) / 2
     radio = (n2 - n1) / 2
-    distancia = radio * 2
+    
+    if radio < 0:
+        distancia = radio * -2
+    else:
+        distancia = radio * 2
     
     return distancia
 
