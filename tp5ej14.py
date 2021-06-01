@@ -5,10 +5,8 @@
 from errores import convierte_a_int_positivo
 
 def capicua(numero):
-    if str(numero) == str(numero)[::-1]:
-        return True
-    else:
-        return False
+    return str(numero) == str(numero)[::-1]
+        
    
 
 def prueba():
