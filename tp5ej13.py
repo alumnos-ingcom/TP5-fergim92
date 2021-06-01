@@ -6,16 +6,16 @@
 from errores import IngresoIncorrecto
 
 def buscar_palabra(texto, palabra):
-    lista_palabras = texto.split()                     ##separamos el texto en sus palabras y los guardamos en una lista
-    palabra = palabra.lower()                          ##ignoramos las mayusculas solo buscamos que las palabras coincidan
+    lista_palabras = texto.split()                     
+    palabra = palabra.lower()                          
    
     for i in range (len(lista_palabras)):
-        lista_palabras[i] = lista_palabras[i].lower()  ## ignoramos las mayusculas del texto
-        if lista_palabras[i] == palabra:               ##comparamos cada elemento de la lista con la palabra que buscamos
+        lista_palabras[i] = lista_palabras[i].lower()  
+        if lista_palabras[i] == palabra:               
             posicion = i+1
-            return posicion                            ## si coinciden retornamos la posicion de la coincidencia
+            return posicion                            
         
-    raise IngresoIncorrecto(f'"{palabra}" No se encuentra en el texto') ## si no encontramos la palabra el ultimo paso es levantar una excepcion
+    raise IngresoIncorrecto(f'"{palabra}" No se encuentra en el texto')
 
 
 def prueba():
