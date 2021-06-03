@@ -14,11 +14,11 @@ def cifrado(texto, mover):
         numero_letra = ord(letra)
         numero_letra_modi = numero_letra + mover
 
-        if numero_letra_modi > 122:
+        if numero_letra_modi > ord('z'):
             numero_letra_modi -= 26
-        if (numero_letra_modi > 90) and (numero_letra_modi < 97):
+        if (numero_letra_modi > ord('Z')) and (numero_letra_modi < ord('a')):
             numero_letra_modi -= 26 
-        if (numero_letra_modi > 57) and (numero_letra_modi < 65):
+        if (numero_letra_modi > ord('9')) and (numero_letra_modi < ord('A')):
             numero_letra_modi -= 10
                 
         letra_modi = chr(numero_letra_modi)
@@ -38,11 +38,11 @@ def decifrado(texto, mover):
         numero_letra = ord(letra)
         numero_letra_modi = numero_letra - mover
         
-        if (numero_letra_modi < 97) and (numero_letra_modi > 90):
+        if (numero_letra_modi < ord('a')) and (numero_letra_modi > ord('Z')):
             numero_letra_modi += 26
-        if (numero_letra_modi < 65) and (numero_letra_modi > 57):
+        if (numero_letra_modi < ord('A')) and (numero_letra_modi > ord('9')):
             numero_letra_modi += 26
-        if (numero_letra_modi < 48):
+        if (numero_letra_modi < ord('0')):
             numero_letra_modi += 10
             
         letra_modi = chr(numero_letra_modi)
